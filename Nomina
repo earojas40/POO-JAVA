@@ -1,0 +1,24 @@
+class Nomina{
+  public static void pago(double salariobase,int hora) {
+		if (salariobase< 8.0){
+			System.out.println("Se le pagara $8.00 por la hora laborada");
+		} else if (hora > 60) {
+			System.out.println("El número de horas no debe ser mas de 60");
+		} else {
+			int horaextraordinaria = 0;
+			if (hora > 40){
+				horaextraordinaria = hora-40;
+				hora = 40; 
+			}
+			double pago = salariobase * hora;
+			pago += horaextraordinaria * salariobase* 1.5;
+			System.out.println("El pago de este empleado es $" + pago);
+		}
+	}
+	public static void main (String [] arguments){
+pago (4.2, 70);
+pago (8.2, 45);
+pago (15.0, 85);
+}
+}
+
